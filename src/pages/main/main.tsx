@@ -43,6 +43,19 @@ const CopyTrading = lazy(() => import('../copy-trading'));
 const SmartTrader = lazy(() => import('../smart-trader'));
 const Dtrader = lazy(() => import('../dtrader'));
 const FreeBots = lazy(() => import('../free-bots/free-bots.tsx')); // Assuming you created free-bots.tsx
+const Analysis = lazy(() => import('../analysis/analysis'));
+
+const AnalysisToolIcon = () => (
+    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.5 3.5V6.5" stroke="var(--text-general)" stroke-linecap="round"/>
+<path d="M7.5 14.5V18.5" stroke="var(--text-general)" stroke-linecap="round"/>
+<path d="M6.8 6.5C6.08203 6.5 5.5 7.08203 5.5 7.8V13.2C5.5 13.918 6.08203 14.5 6.8 14.5H8.2C8.91797 14.5 9.5 13.918 9.5 13.2V7.8C9.5 7.08203 8.91797 6.5 8.2 6.5H6.8Z" stroke="var(--text-general)"/>
+<path d="M16.5 6.5V11.5" stroke="var(--text-general)" stroke-linecap="round"/>
+<path d="M16.5 16.5V20.5" stroke="var(--text-general)" stroke-linecap="round"/>
+<path d="M15.8 11.5C15.082 11.5 14.5 12.082 14.5 12.8V15.2C14.5 15.918 15.082 16.5 15.8 16.5H17.2C17.918 16.5 18.5 15.918 18.5 15.2V12.8C18.5 12.082 17.918 11.5 17.2 11.5H15.8Z" stroke="var(--text-general)"/>
+</svg>
+);
+
 
 const AppWrapper = observer(() => {
     const { connectionStatus } = useApiBase();
@@ -74,7 +87,7 @@ const AppWrapper = observer(() => {
     const { clear } = summary_card;
     const { DASHBOARD, BOT_BUILDER } = DBOT_TABS;
     const init_render = React.useRef(true);
-    const hash = ['dashboard', 'bot_builder', 'chart', 'free_bots', 'copy_trading', 'smart_trader', 'dtrader'];
+    const hash = ['dashboard', 'bot_builder', 'chart', 'free_bots', 'copy_trading', 'smart_trader', 'dtrader','Analysis'];
     const { isDesktop } = useDevice();
     const location = useLocation();
     const navigate = useNavigate();
@@ -413,6 +426,14 @@ const AppWrapper = observer(() => {
                                     <Signals />
                                 </Suspense>
                             </div>
+                        <div label={<><AnalysisToolIcon /><Localize i18n_default_text='Analysis Tool' /></>} id='id-analysis-tool'
+                             onClick={() => handleLinkChange('analysis')}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <Suspense fallback={<ChunkLoader message={localize('Please wait, loading page...')} />}>
+                                <Analysis />
+                            </Suspense>
+                           </div>
                         </Tabs>
                     </div>
                 </div>
