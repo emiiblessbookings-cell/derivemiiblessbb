@@ -44,6 +44,7 @@ const SmartTrader = lazy(() => import('../smart-trader'));
 const Dtrader = lazy(() => import('../dtrader'));
 const FreeBots = lazy(() => import('../free-bots/free-bots.tsx')); // Assuming you created free-bots.tsx
 const Analysis = lazy(() => import('../analysis/analysis'));
+const AiPage = lazy(() => import('../ai/ai')); // Assuming you created AiPage.tsx
 
 const AnalysisToolIcon = () => (
     <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +54,12 @@ const AnalysisToolIcon = () => (
 <path d="M16.5 6.5V11.5" stroke="var(--text-general)" stroke-linecap="round"/>
 <path d="M16.5 16.5V20.5" stroke="var(--text-general)" stroke-linecap="round"/>
 <path d="M15.8 11.5C15.082 11.5 14.5 12.082 14.5 12.8V15.2C14.5 15.918 15.082 16.5 15.8 16.5H17.2C17.918 16.5 18.5 15.918 18.5 15.2V12.8C18.5 12.082 17.918 11.5 17.2 11.5H15.8Z" stroke="var(--text-general)"/>
+</svg>
+);
+
+const AiPageIcon = () => (
+   <svg fill="var(--text-general)" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M20,9.85714286 L20,14.1428571 C20,15.2056811 19.0732946,16 18,16 L6,16 C4.92670537,16 4,15.2056811 4,14.1428571 L4,9.85714286 C4,8.79431889 4.92670537,8 6,8 L18,8 C19.0732946,8 20,8.79431889 20,9.85714286 Z M6,10 L6,14 L18,14 L18,10 L6,10 Z M2,19 L2,17 L22,17 L22,19 L2,19 Z M2,7 L2,5 L22,5 L22,7 L2,7 Z"/>
 </svg>
 );
 
@@ -87,7 +94,7 @@ const AppWrapper = observer(() => {
     const { clear } = summary_card;
     const { DASHBOARD, BOT_BUILDER } = DBOT_TABS;
     const init_render = React.useRef(true);
-    const hash = ['dashboard', 'bot_builder', 'chart', 'free_bots', 'copy_trading', 'smart_trader', 'dtrader','Analysis'];
+    const hash = ['dashboard', 'bot_builder', 'chart', 'free_bots', 'copy_trading', 'smart_trader', 'dtrader','Analysis', 'ai',];
     const { isDesktop } = useDevice();
     const location = useLocation();
     const navigate = useNavigate();
@@ -432,6 +439,14 @@ const AppWrapper = observer(() => {
                         >
                             <Suspense fallback={<ChunkLoader message={localize('Please wait, loading page...')} />}>
                                 <Analysis />
+                            </Suspense>
+                           </div>
+                        <div label={<><AiPageIcon /><Localize i18n_default_text='Expert AI' /></>} id='id-ai'
+                             onClick={() => handleLinkChange('AiPage')}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <Suspense fallback={<ChunkLoader message={localize('Please wait, loading page...')} />}>
+                                <AiPage />
                             </Suspense>
                            </div>
                         </Tabs>
