@@ -18,7 +18,7 @@ export const livechat_client_id = "66aa088aad5a414484c1fd1fa8a5ace7"
 
 export const domain_app_ids = {
   "emiisdtrader.pages.dev": APP_IDS.MASTERDERIV,
-  "emiisdtrader.pages.dev": APP_IDS.MASTERDERIV,
+  "www.emiisdtrader.pages.dev": APP_IDS.MASTERDERIV,
 }
 
 export const getCurrentProductionDomain = () =>
