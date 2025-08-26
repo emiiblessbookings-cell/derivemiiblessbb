@@ -49,73 +49,73 @@ const FreeBots = observer(() => {
             name: 'AUTO wealth mine AI PREMIUM',
             description: 'AUTO wealth mine AI PREMIUM',
             file: 'AUTO wealth mine AI PREMIUM.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Emiisdtrader VIP',
             description: 'Emiisdtrader VIP',
             file: 'Emiisdtrader VIP.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Emiisdtrader expert 🚀📊',
             description: 'Emiisdtrader expert 🚀📊',
             file: 'Emiisdtrader expert 🚀📊.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Emiisdtrader 1$ System 💰',
             description: 'Emiisdtrader 1$ System 💰',
             file: 'Emiisdtrader 1$ System 💰.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Emiisdtrader Fusion-X 2025',
             description: 'Emiisdtrader Fusion-X 2025',
             file: 'Emiisdtrader Fusion-X 2025.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Emiisdtrader Rise & Fall Auto Switch 🔄📈📉',
             description: 'Emiisdtrader Rise & Fall Auto Switch 🔄📈📉',
             file: 'Emiisdtrader Rise & Fall Auto Switch 🔄📈📉.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'xEmiisdtrader Even_Odd Auto Switch 2025🔄xx',
             description: 'Emiisdtrader Even_Odd Auto Switch 2025🔄',
             file: 'Emiisdtrader Even_Odd Auto Switch 2025🔄.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Emiisdtrader Fusion Analyzer🔍🔍📊📊',
             description: 'Emiisdtrader Fusion Analyzer🔍🔍📊📊',
             file: 'Emiisdtrader Fusion Analyzer🔍🔍📊📊.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Emiisdtrader Encroach Trader 💵',
             description: 'Emiisdtrader Encroach Trader 💵',
             file: 'Emiisdtrader Encroach Trader 💵.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'New DollarPrinterBot  2025 Version 💰💰💰',
             description: 'New DollarPrinterBot  2025 Version 💰💰💰',
             file: 'New DollarPrinterBot  2025 Version 💰💰💰.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Alpha Version 2025',
             description: 'Alpha Version 2025',
             file: 'Alpha Version 2025.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
         {
             name: 'Emiisdtrader Version Of Candle Mine🎯🎯',
             description: 'Emiisdtrader Version Of Candle Mine🎯🎯',
             file: 'Emiisdtrader Version Of Candle Mine🎯🎯.xml',
-            icon: '🤖',
+            icon: '⚡️',
         },
     ];
 
@@ -261,3 +261,4 @@ const FreeBots = observer(() => {
 });
 
 export default FreeBots;
+
