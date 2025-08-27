@@ -10,15 +10,15 @@ export const APP_IDS = {
   PRODUCTION: 65555,
   PRODUCTION_BE: 65556,
   PRODUCTION_ME: 65557,
-  MASTERDERIV: 92303,
+  MASTERDERIV: 98164,
 }
 
 export const livechat_license_id = 12049137
 export const livechat_client_id = "66aa088aad5a414484c1fd1fa8a5ace7"
 
 export const domain_app_ids = {
-  "emiisdtrader.pages.dev": APP_IDS.MASTERDERIV,
-  "www.emiisdtrader.pages.dev": APP_IDS.MASTERDERIV,
+  "emi1sdtrader.pages.dev": APP_IDS.MASTERDERIV,
+  "www.emi1sdtrader.pages.dev": APP_IDS.MASTERDERIV,
 }
 
 export const getCurrentProductionDomain = () =>
